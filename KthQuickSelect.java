@@ -27,6 +27,7 @@ public class KthQuickSelect {
 
         while (lo <= hi) {
             int p = lo + rng.nextInt(hi - lo + 1);      // random pivot index
+            // https://www.geeksforgeeks.org/dsa/lomuto-partition-algorithm/
             int idx = partition(inputArray, lo, hi, p);          // Lomuto partition
             if (idx == target) return inputArray[idx];
             if (idx < target) lo = idx + 1; else hi = idx - 1;
